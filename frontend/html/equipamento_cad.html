@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/equipamento_cad.js"defer></script>
+    <title>Cadastrar Equipamento</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastrar Equipamento</h1>
+        <form>
+            <label for="modelo">Modelo</label>
+            <input type="text" id="modelo" required><br>
+
+            <label for="fabricante">Fabricante</label>
+            <input type="text" id="fabricante" required><br>
+
+            <label for="numeroSerie">Número de Série</label>
+            <input type="number" id="numeroSerie" required><br>
+
+            <label for="idCliente">Código do Cliente</label>
+            <input type="number" id="idCliente" required><br>
+
+            <button id="btn_cadastrar">Cadastrar</button>
+        </form>
+        <div id="resposta" class="resposta"></div>
+    </main>
+</body>
+</html>

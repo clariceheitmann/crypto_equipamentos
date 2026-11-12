@@ -1,0 +1,44 @@
+@baseUrl = http://localhost:3000
+
+GET {{baseUrl}}
+
+### Cadastrar funcionário
+POST {{baseUrl}}/funcionario
+Content-Type: application/json
+
+{
+    "nome": "Oliver",
+    "email": "oliver@gmail.com",
+    "senha": "123"
+}
+
+### Cadastrar funcionário2
+POST {{baseUrl}}/funcionario
+Content-Type: application/json
+
+{
+    "nome": "Ana",
+    "email": "ana@gmail.com",
+    "senha": "123"
+}
+
+### Realizar login 
+# @name loginReq
+POST {{baseUrl}}/login 
+Content-Type: application/json
+
+{
+    "email": "oliver@gmail.com",
+    "senha": "123"
+}
+
+### Cadastrar cliente 
+POST {{baseUrl}}/cliente
+Authorization: {{loginReq.response.body.token}}
+Content-Type: application/json
+
+{
+    "nome": "Oliver",
+    "cpf": "12345678901",
+}
+
